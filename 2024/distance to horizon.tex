@@ -1,0 +1,28 @@
+\input{preamble}
+
+\begin{document}
+
+\section*{Gazing East}
+
+At my wedding, my Ph.D. advisor, the late and wonderful Richard S. Ellis, enthusiastically told me of a mathematical observation he had made from one of the beaches in the area of Brewster, MA, where the wedding took place. It was a typical, appropriate, and obviously memorable anecdote--emerging from the excited wonder with which he viewed the world. His observation was a quick way of estimating how far one can see looking out from the beach, a situation illustrated in the diagram below. If you are standing at the very top of the circle, the red segment is your sightline to the horizon. Because this line is tangent to the circle, it is perpendicular to the radius of the circle that passes through the point where your sightline meets the horizon. That is, angle $A$ is a right angle, and we can use the Pythagorean Theorem to determine the length of the red segment.
+
+\pic{images/SightlineToHorizon}
+
+Let $r$ be the radius of the circle (the Earth), $\ds \epsilon$ the height of the observer gazing seaward, and $x$ the length of the red segment. I make the unusual choice of the variable $\ds \epsilon$ to represent the height of the observer because compared to the other variables in this scenario, especially $r$, $\ds \epsilon$ is very small. We can express this by writing: $\ds \epsilon << r$. By the Pythagorean Theorem
+\[
+  (r+\epsilon)^2 = x^2 + r^2
+\]
+Solving this for $x$ gives
+\begin{equation} \label{SolvedForX}
+  x = \sqrt{2 r \epsilon + \epsilon^2}
+\end{equation}
+
+If we measure distance in feet, $\ds \epsilon \approx 6$ and $\ds r \approx 2.1\times 10^7$ (see how $\ds \epsilon<<r$). Computing $x$ with these values gives a result of exactly three miles to the horizon.
+
+The $\ds \epsilon^2$ term in (\ref{SolvedForX}) is, for our purposes, tiny relative to the $\ds 2 r \epsilon$ term. One way to quantify this is to look at the ratio $\ds \frac{\epsilon^2}{2 r \epsilon} = \frac{\epsilon}{2 r}$. The numerator is the height of the observer, and the denominator is \textit{the diameter of the Earth}. Even for an observer atop Mt. Everest, this ratio is about $\ds .0007$. That is, the second term in (\ref{SolvedForX}) is a small fraction of one percent of the first for the situations in which we are interested. This suggests we could get a simpler, more illuminating approximate formula by simply discarding this tiny term to obtain
+\[
+ x \approx \sqrt{2 r \epsilon} \approx 6467 \sqrt{\epsilon}
+\]
+
+
+\end{document}

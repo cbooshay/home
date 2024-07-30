@@ -1,0 +1,33 @@
+\input{preamble}
+
+\begin{document}
+
+\section*{Those crazy exponentials}
+
+Suppose the population of a bacteria culture $t$ hours after it is activated is well modeled by the function 
+\[
+  f(t) = 100 e^{.04 t}
+\]
+You may recognize this as an example of an exponential growth model. In 20 hours, the size of the culture will be approximately
+\[
+  f(20) = 100 e^{(.04)(20)} \approx 1113
+\]
+Often, the growth constant, $\ds .04$ is computed or estimated somehow. Suppose in doing this computation, you used one more place of decimal accuracy and obtained the model 
+\[
+  g(t) = 100 e^{.044 t}
+\]
+You would compute the size of the culture in 20 hours to be approximately
+\[
+  g(20) = 100 e^{(.044)(20)} \approx 1205
+\]
+Our answers are quite different even though our estimates of the growth constant only differed in the third decimal place.
+
+Suppose I compute the growth constant to be $r$, and you compute it to be $s$, and let's say that $\ds r<s$. Then my estimate of the size of the culture in $t$ hours is $\ds 100 e^{rt}$ and yours is $\ds 100 e^{s t}$. Their ratio is
+\begin{equation} \label{DecayingExponential}
+  \frac{100 e^{r t}}{100 e^{st}} = e^{(r-s) t}
+\end{equation}
+Because my growth constant is smaller than yours, my estimate will be smaller than yours, but if our estimates are about the same, then the ratio in (\ref{DecayingExponential}) should be about 1. However, the right hand side of (\ref{DecayingExponential}) decays \textit{exponentially}. If your growth constant is $.01$ more than mine, and we wish to estimate the size of the culture in 10 hours, this ratio will be about .9, which means that my estimate is 90\% of yours--a significant difference. If we estimate the size of the culture in 70 hours (less than three days), your estimate will be more than twice as big as mine.
+
+
+
+\end{document}

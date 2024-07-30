@@ -1,0 +1,232 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> Chris Boucher </title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Times  <!--, Arial, Helvetica, sans-serif -->;
+	background: #088A29;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	margin-top: 30px;
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-color: #4B610B;  /* this seems to control the background of the entire page */
+	background-image: url();
+	background-repeat: no-repeat;
+}
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+td {
+    padding: 5px;
+}
+
+.oneColElsCtr #container {
+	width: 56em;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+
+span.footnote { 
+    float: footnote; 
+    counter-increment: footnote;
+}
+
+.footnote::footnote-call {
+    content: counter(footnote, decimal) " ";
+    color: green;
+}
+
+.footnote::footnote-marker {
+    content: counter(footnote, lower-roman);
+    font-size: 14pt;
+    color: blue;
+}
+
+a:link {
+	color: #CC3300;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #CC3300;
+}
+a:hover {
+	text-decoration: none;
+	color: #333399;
+}
+a:active {
+	text-decoration: none;
+	color: #CC3300;
+}
+.deco-solid { 
+	padding-left:4px;
+	font-size:0.4em; 
+	vertical-align:10%; 
+	line-height:24px;
+	margin-left:3px; 
+	margin-right:7px;
+	background-color:#1C1133; }
+*  {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Times;
+  padding: 20px;
+  background: #1f1f1f;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 25px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 0 /* was 20px */;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.maincard {
+  text-align: left;
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.sidecard {
+  align: right;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.mycard {
+  align: right;
+  text-align: center;
+  background-color: #cdd4d3;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.pdf {
+        float: left;
+        width: 75%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  } */
+} 
+-->
+</style></head>
+
+<div class="header">
+  <h2 style="font-family:Times;"> Mostly Math </h2>
+</div>
+
+<div class="row">
+
+  <div class="leftcolumn">
+  
+    <div class="maincard">
+       <a href="distance to horizon.pdf"> <font size="+2"> Gazing East </font> </a> 
+       <font color="gray"> (July 16, 2024) </font><br>  
+      <p> </p>
+      
+    </div>
+    <div class="maincard">
+       <a href="ExponentialGrowthAndRounding.pdf"> <font size="+2"> Exponential Growth and Rounding </font> </a> 
+       <font color="gray"> (July 15, 2024) </font> <br>
+       <p> </p>
+    </div>
+
+  </div> 
+  <div class="rightcolumn">
+    <div class="mycard">
+      <h1> Chris Boucher </h1>
+      <img src="file:///Users/cboucher/Documents/salem state/web page/2024/ParisMe.jpeg" 
+      	align=bottom width=200 height=250 border=0>
+
+      <p> Mathematics professor at Salem State University </p>
+      <p> <a href=""> About </a> </p>
+      <p> <a href=""> CV </a> </p>
+      <p> <a href="https://www.linkedin.com/in/chris-boucher-24aa6a"> &nbsp; LinkedIn </a> </p>
+    </div>
+    
+    <div class="sidecard">
+      <h3> Of Interest </h3>
+      <p> <a href="https://www.johndcook.com/blog/"> &nbsp; John D. Cook's blog </a> </p> 
+      <p> <a href="https://writings.stephenwolfram.com"> &nbsp; Stephen Wolfram's writings </a> </p> <br>
+    </div>
+    
+    <div class = "sidecard">
+     <a href='http://www.freevisitorcounters.com'>more information</a> 
+     <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=dcf95a35a5debf3e63d1a237ea90e50b7b15e577'></script>
+     <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1207592/t/3"></script>
+	</div>
+  </div>
+</div>
+
+
+
+
+
+</html>
