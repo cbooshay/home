@@ -1,0 +1,130 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4150,        120]
+NotebookOptionsPosition[      3674,        103]
+NotebookOutlinePosition[      4069,        119]
+CellTagsIndexPosition[      4026,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Circle", "[", "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1.1"}], "}"}]}], "}"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{"75", " ", "Degree"}], "]"}], ",", " ", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"75", " ", "Degree"}], "]"}]}], "}"}]}], "}"}], "]"}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{"Text", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<A\>\"", ",", " ", "14", ",", " ", "Italic"}], "]"}], ",",
+        " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"1.1", "*", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"75", " ", "Degree"}], "]"}]}], ",", " ", 
+         RowBox[{"1.1", " ", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"75", " ", "Degree"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", "Thick", ",", 
+     RowBox[{"ColorData", "[", 
+      RowBox[{"1", ",", "2"}], "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1.1"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{"75", " ", "Degree"}], "]"}], ",", " ", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"75", " ", "Degree"}], "]"}]}], "}"}]}], "}"}], "]"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ImageSize", "->", "200"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Axes", "->", "None"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.93159298572976*^9, 3.931593135774191*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"a64e8046-4965-4bac-8289-0e583f81ba9e"],
+
+Cell[BoxData[
+ GraphicsBox[{CircleBox[{0, 0}], LineBox[{{0, 0}, {0, 1.1}}], 
+   LineBox[NCache[{{0, 0}, {
+      Rational[1, 2] 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]), 
+       Rational[1, 2] 2^Rational[-1, 2] (1 + 3^Rational[1, 2])}}, {{0, 0}, {
+      0.2588190451025207, 0.9659258262890682}}]], InsetBox[
+    StyleBox["\<\"A\"\>",
+     StripOnInput->False,
+     FontSize->14,
+     FontSlant->Italic], {0.2847009496127728, 1.062518408917975}], 
+   {RGBColor[0.6, 0.24, 0.4428931686004542], Thickness[Large], 
+    LineBox[NCache[{{0, 1.1}, {
+       Rational[1, 2] 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]), 
+        Rational[1, 2] 2^Rational[-1, 2] (1 + 3^Rational[1, 2])}}, {{
+       0, 1.1}, {0.2588190451025207, 0.9659258262890682}}]]}},
+  Axes->None,
+  ImageSize->200]], "Output",
+ CellChangeTimes->{{3.931593054036915*^9, 3.9315930966067753`*^9}, 
+   3.931593136279097*^9},
+ CellLabel->"Out[77]=",ExpressionUUID->"533e8018-6968-4219-907c-19cbf345e199"]
+}, Open  ]]
+},
+WindowSize->{808, 696},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8f213ee7-7d87-4d08-a8f5-88f529f34377"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2117, 57, 199, "Input",ExpressionUUID->"a64e8046-4965-4bac-8289-0e583f81ba9e"],
+Cell[2700, 81, 958, 19, 227, "Output",ExpressionUUID->"533e8018-6968-4219-907c-19cbf345e199"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
