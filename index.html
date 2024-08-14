@@ -7,17 +7,18 @@
 <style type="text/css">
 <!--
 body {
-	font: 100% Times  <!--, Arial, Helvetica, sans-serif -->;
-	background: #088A29;
+	font: 100%;
+    font-family: Times;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	margin-top: 30px;
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
 	color: #000000;
-	background-color: #4B610B;  /* this seems to control the background of the entire page */
+	background-color: #879677;  /* #4B610B   this seems to control the background of the entire page */
 	background-image: url();
 	background-repeat: no-repeat;
 }
+    
 table, th, td {
     border: 1px solid gray;
     border-collapse: collapse;
@@ -81,12 +82,6 @@ a:active {
   box-sizing: border-box;
 }
 
-body {
-  font-family: Times;
-  padding: 20px;
-  background: #1f1f1f;
-}
-
 /* Header/Blog Title */
 .header {
   padding: 25px;
@@ -109,35 +104,28 @@ body {
   padding-left: 0 /* was 20px */;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
 /* Add a card effect for articles */
 .maincard {
   text-align: left;
   background-color: white;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .sidecard {
   align: right;
   text-align: center;
   background-color: white;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .mycard {
   align: right;
   text-align: center;
   background-color: #cdd4d3;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 /* Clear floats after the columns */
@@ -178,37 +166,39 @@ body {
 -->
 </style></head>
 
+<!--
 <div class="header">
   <h2 style="font-family:Times;"> Mostly Math </h2>
 </div>
-
+-->
 <div class="row">
-
   <div class="leftcolumn">
-  
     <div class="maincard">
-       <a href="distance to horizon.pdf"> <font size="+2"> Gazing East </font> </a> 
-       <font color="gray"> (July 16, 2024) </font><br>  
-      <p> </p>
-      
+<!--    	<iframe name="OpenPost"; float="left"; width="75%"; hidden> </iframe>  -->
+       <a href="thepdfs/distance to horizon.pdf" target="leftcolumn"> <font size="+2"> Gazing East </font> </a>
+       <font color="gray"> (July 16, 2024) </font><br>
     </div>
     <div class="maincard">
-       <a href="ExponentialGrowthAndRounding.pdf"> <font size="+2"> Exponential Growth and Rounding </font> </a> 
+       <a href="thepdfs/ExponentialGrowthAndRounding.pdf"> <font size="+2"> Exponential Growth and Rounding </font> </a>
        <font color="gray"> (July 15, 2024) </font> <br>
        <p> </p>
     </div>
-
-  </div> 
+    <div class="maincard">
+       <a href="thepdfs/ADollarADay.pdf"> <font size="+2"> A Dollar a Day </font> </a>
+       <font color="gray"> (August 14, 2024) </font> <br>
+       <p> </p>
+    </div>
+  </div>
+  
   <div class="rightcolumn">
     <div class="mycard">
       <h1> Chris Boucher </h1>
-      <img src="ParisMe.jpeg" 
-      	align=bottom width=200 height=250 border=0>
-
+      <img src="ParisMe.jpeg" align=bottom width=220 height=250 border=0>
       <p> Mathematics professor at Salem State University </p>
-      <p> <a href=""> About </a> </p>
-      <p> <a href=""> CV </a> </p>
+      <p> <a href="thepdfs/About.pdf"> about </a> </p>
+ <!-- <p> <a href=""> CV </a> </p> -->
       <p> <a href="https://www.linkedin.com/in/chris-boucher-24aa6a"> &nbsp; LinkedIn </a> </p>
+      <p> <a href="mailto:cboucher@salemstate.edu"> contact </a> </p>
     </div>
     
     <div class="sidecard">
@@ -216,12 +206,14 @@ body {
       <p> <a href="https://www.johndcook.com/blog/"> &nbsp; John D. Cook's blog </a> </p> 
       <p> <a href="https://writings.stephenwolfram.com"> &nbsp; Stephen Wolfram's writings </a> </p> <br>
     </div>
-    
+
+<!--
     <div class = "sidecard">
      <a href='http://www.freevisitorcounters.com'>more information</a> 
      <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=dcf95a35a5debf3e63d1a237ea90e50b7b15e577'></script>
      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1207592/t/3"></script>
 	</div>
+-->
   </div>
 </div>
 

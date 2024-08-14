@@ -1,0 +1,34 @@
+\input{preamble}
+
+\begin{document}
+
+\section*{A Dollar a Day \begin{small} \begin{color}{gray} (\today) \end{color} \end{small}}
+
+If a \$400 asset grows by 20\%, its new value is 
+\[
+  400 + (400)(.2) = 400(1+.2)
+\]
+If you invest five dollars in an asset with an annual return of $r$, then your daily return is $\ds i = r/365$--that is, the asset grows at a rate of $i$ per day
+and after one day, you are the proud owner of an asset worth $\ds 5(1+i)$ dollars. After two days, your portfolio is worth 
+\[
+  5\lp 1 +i \rp + 5\lp 1 + i \rp \lp i \rp = 5\lp 1 + i \rp^2
+\]
+and after $n$ days you have $\ds 5\lp 1 + i \rp^n$.
+
+If you saved five dollars \textit{every} day for ten years, you would save $\ds (5)(10)(365) = \$ 18250$ dollars (ignoring an extra few bucks from February 29). But if the money were invested in the asset described above, you would do better than that because your dollars grow over time. 
+
+The money you invest today has not yet had time to grow and is still just worth five dollars, but yesterday's savings has grown to be worth $\ds 5(1+i)$ dollars, that of two days ago to be worth $\ds 5(1+i)^2$ dollars, and so forth. The total value of your savings is
+\[
+  \sum_{k=0}^{(365)(10)-1} 5\lp 1 + i \rp^k = (5)\lp\frac{(1+i)^{3650}-1}{i} \rp
+\]
+The expression on the right comes from the formula for geometric sums:
+\[
+  \sum_{k=0}^n a^k = \frac{1-a^{n+1}}{1-a}
+\]
+
+So saving $A$ dollars a day for $n$ days yields a value of $\ds A \cdot \lp \frac{(1+i)^n-1}{i}\rp$ dollars, with the multiplier on the right usually symbolized $\ds s(n,i)$ in business math texts. This number represents the effective number of contributions you made to your investment. That is, if you saved $A$ dollars a day for $n$ days with no return on your investment, you would wind up with $\ds A \cdot n$ dollars, but with a daily return of $i$, you wind up instead with $\ds A \cdot s(n,i)$ dollars. The graph below shows a comparison of $n$ and $\ds s(n,i)$ for a $\ds 5\% $ annual rate of return. 
+
+\pic{images/DollarADayPic}
+
+ 
+\end{document}

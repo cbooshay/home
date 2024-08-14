@@ -10,17 +10,51 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4150,        120]
-NotebookOptionsPosition[      3674,        103]
-NotebookOutlinePosition[      4069,        119]
-CellTagsIndexPosition[      4026,        116]
+NotebookDataLength[      4313,        134]
+NotebookOptionsPosition[      3836,        117]
+NotebookOutlinePosition[      4231,        133]
+CellTagsIndexPosition[      4188,        130]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"eps", "=", ".1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", " ", "=", " ", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", "eps"}], ")"}], "^", "2"}], "-", "1"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", "eps"}], ")"}], "^", "2"}], "-", "1"}], ")"}], "/", 
+    
+    RowBox[{"(", 
+     RowBox[{"1", "+", "eps"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{"h", "^", "2"}], "-", 
+     RowBox[{"b", "^", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pt", "=", 
+    RowBox[{"{", 
+     RowBox[{"c", ",", " ", 
+      RowBox[{"1", "+", "eps", "-", "b"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"Graphics", "[", 
   RowBox[{
    RowBox[{"{", "\[IndentingNewLine]", 
@@ -32,33 +66,23 @@ Cell[BoxData[
         RowBox[{"{", 
          RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
         RowBox[{"{", 
-         RowBox[{"0", ",", "1.1"}], "}"}]}], "}"}], "]"}], ",", 
+         RowBox[{"0", ",", 
+          RowBox[{"1", "+", "eps"}]}], "}"}]}], "}"}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{"Line", "[", 
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"Cos", "[", 
-           RowBox[{"75", " ", "Degree"}], "]"}], ",", " ", 
-          RowBox[{"Sin", "[", 
-           RowBox[{"75", " ", "Degree"}], "]"}]}], "}"}]}], "}"}], "]"}], ",",
-      "\[IndentingNewLine]", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", " ", "pt"}], "}"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{"Text", "[", 
       RowBox[{
        RowBox[{"Style", "[", 
         RowBox[{"\"\<A\>\"", ",", " ", "14", ",", " ", "Italic"}], "]"}], ",",
         " ", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"1.1", "*", 
-          RowBox[{"Cos", "[", 
-           RowBox[{"75", " ", "Degree"}], "]"}]}], ",", " ", 
-         RowBox[{"1.1", " ", 
-          RowBox[{"Sin", "[", 
-           RowBox[{"75", " ", "Degree"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "+", "eps"}], ")"}], "*", "pt"}]}], "]"}], ",", 
      "\[IndentingNewLine]", "Thick", ",", 
      RowBox[{"ColorData", "[", 
       RowBox[{"1", ",", "2"}], "]"}], ",", 
@@ -66,39 +90,29 @@ Cell[BoxData[
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"0", ",", "1.1"}], "}"}], ",", " ", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"Cos", "[", 
-           RowBox[{"75", " ", "Degree"}], "]"}], ",", " ", 
-          RowBox[{"Sin", "[", 
-           RowBox[{"75", " ", "Degree"}], "]"}]}], "}"}]}], "}"}], "]"}]}], 
-    "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"0", ",", 
+          RowBox[{"1", "+", "eps"}]}], "}"}], ",", " ", "pt"}], "}"}], 
+      "]"}]}], "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
    RowBox[{"ImageSize", "->", "200"}], ",", "\[IndentingNewLine]", 
-   RowBox[{"Axes", "->", "None"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.93159298572976*^9, 3.931593135774191*^9}},
- CellLabel->"In[77]:=",ExpressionUUID->"a64e8046-4965-4bac-8289-0e583f81ba9e"],
+   RowBox[{"Axes", "->", "None"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.93159298572976*^9, 3.931593135774191*^9}, {
+  3.931595124284636*^9, 3.9315952244391603`*^9}},
+ CellLabel->"In[78]:=",ExpressionUUID->"a64e8046-4965-4bac-8289-0e583f81ba9e"],
 
 Cell[BoxData[
  GraphicsBox[{CircleBox[{0, 0}], LineBox[{{0, 0}, {0, 1.1}}], 
-   LineBox[NCache[{{0, 0}, {
-      Rational[1, 2] 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]), 
-       Rational[1, 2] 2^Rational[-1, 2] (1 + 3^Rational[1, 2])}}, {{0, 0}, {
-      0.2588190451025207, 0.9659258262890682}}]], InsetBox[
+   LineBox[{{0, 0}, {0.416597790450531, 0.909090909090909}}], InsetBox[
     StyleBox["\<\"A\"\>",
      StripOnInput->False,
      FontSize->14,
-     FontSlant->Italic], {0.2847009496127728, 1.062518408917975}], 
+     FontSlant->Italic], {0.45825756949558416, 0.9999999999999999}], 
    {RGBColor[0.6, 0.24, 0.4428931686004542], Thickness[Large], 
-    LineBox[NCache[{{0, 1.1}, {
-       Rational[1, 2] 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]), 
-        Rational[1, 2] 2^Rational[-1, 2] (1 + 3^Rational[1, 2])}}, {{
-       0, 1.1}, {0.2588190451025207, 0.9659258262890682}}]]}},
+    LineBox[{{0, 1.1}, {0.416597790450531, 0.909090909090909}}]}},
   Axes->None,
   ImageSize->200]], "Output",
  CellChangeTimes->{{3.931593054036915*^9, 3.9315930966067753`*^9}, 
-   3.931593136279097*^9},
- CellLabel->"Out[77]=",ExpressionUUID->"533e8018-6968-4219-907c-19cbf345e199"]
+   3.931593136279097*^9, 3.9315952267973957`*^9},
+ CellLabel->"Out[83]=",ExpressionUUID->"10c68b28-9da8-4d01-86d4-198832074d68"]
 }, Open  ]]
 },
 WindowSize->{808, 696},
@@ -119,12 +133,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 2117, 57, 199, "Input",ExpressionUUID->"a64e8046-4965-4bac-8289-0e583f81ba9e"],
-Cell[2700, 81, 958, 19, 227, "Output",ExpressionUUID->"533e8018-6968-4219-907c-19cbf345e199"]
+Cell[580, 22, 2576, 77, 325, "Input",ExpressionUUID->"a64e8046-4965-4bac-8289-0e583f81ba9e"],
+Cell[3159, 101, 661, 13, 249, "Output",ExpressionUUID->"10c68b28-9da8-4d01-86d4-198832074d68"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
