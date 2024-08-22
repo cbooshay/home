@@ -1,0 +1,27 @@
+\input{preamble}
+
+\begin{document}
+
+\section*{Packing Two Cylinders \begin{small} \begin{color}{gray} (\today) \end{color} \end{small}}
+
+Suppose two cylinders of radii $\ds r_1$ and $\ds r_2$ are to be packed into a box of width $w$. What is the depth $d$ of the shallowest possible box? If $\ds w\geq 2(r_1 + r_2)$, then both cylinders can sit on the bottom of the box, and the minimum depth is the larger of the two radii.
+
+\pic{images/TwoEasyCircles}
+
+However, if $\ds w < 2(r_1+r_2)$, one of the circles will be leaning on the other and not make contact with the bottom of the box.
+
+\pic{images/TwoHarderCircles}
+
+The way to compute the depth of the box is made clear by adding a right triangle whose hypotenuse connects the circle centers. Letting $\ds s = r_1+r_2$, the width of the box is $\ds w  = x+s$, so $\ds x = w-s$. The hypotenuse of the triangle is $s$, so by the Pythagorean Theorem, $\ds y = \sqrt{s^2 - (w-s)^2} = \sqrt{w(2s-w)}$. The depth of the box is $\ds s+y$, and so our solution is 
+\[
+  d = s + \sqrt{w(2s-w)}
+\]
+
+\pic{images/TwoCirclesWithTriangle}
+
+
+\iffalse
+The image below shows the situation viewed from the end of the box. The introduction of the quantities x and y makes the way clear. The height of the box should be s+y, where s is the sum of the radii of the cylinders. As w=s+x, the Pythagorean Theorem applied to the triangle in the image below gives y=Sqrt[w(2s-w)] and so the solution is 
+\fi
+
+\end{document}
