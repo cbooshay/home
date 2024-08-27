@@ -1,0 +1,41 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Wordle and the Wolfram Language \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+The Wolfram Language's built in \verb# DictionaryLookup[] # function allows for some optimization of strategy at the game of Wordle, in which players attempt to guess a five-letter word, being informed after each guess what letters the hidden word has in common with their guess and whether those letters are in the correct position. Running
+
+\begin{verbatim}
+Select[DictionaryLookup[], StringLength[#] == 5 &] // Length
+\end{verbatim}
+
+\noi reveals that there are $6789$ five-letter English words (at least in the Wolfram Language's dictionary). We can determine the number of occurrences of each letter of the alphabet in these words via
+
+\begin{verbatim}
+Reverse[
+ SortBy[
+  Tally[
+   Flatten[
+    Characters /@ 
+     Select[DictionaryLookup[], StringLength[#] == 5 &]]], 
+  Last]
+ ]\end{verbatim}
+ 
+This reports that the five most common letters are, in decreasing order of frequency, ``e", ``s", ``a", ``r", and ``o," which in turn suggests that the best opening word would be a five-letter word spelled with those letters. Being a better coder than a speller, I ran 
+
+\begin{verbatim}
+Intersection[
+ StringJoin /@ Permutations[{"e", "s", "a", "r", "o"}], 
+ Select[DictionaryLookup[], StringLength[#] == 5 &]
+ ]
+ \end{verbatim}
+
+\noi to discover that the only such word is "arose."
+
+\end{document}
