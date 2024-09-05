@@ -1,0 +1,39 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{The Central Binomial Coefficients (1) \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+The numbers $\ds \binom{2n}{n}$ that run vertically down the center of Pascal's Triangle are called the \textit{central binomial coefficients}. I'll use the notation $\ds \gamma_n \doteq \binom{2n}{n}$ for these numbers, which grow quickly with $n$
+
+\[
+\begin{array}{l | l}
+n & \gamma_n \\ \hline
+1 & 2 \\
+5 & 252 \\
+10 & 184756 \\
+15 & 155117520
+\end{array}
+\]
+These numbers are interesting for a number of reasons, one of which is their prime factorizations. A key feature of primes is that if a prime number divides a product, then it must divide one of the factors, so for example the prime 3 divides 36, and no matter how you factor 36, 3 will always divide at least one of the factors.
+\[
+\begin{array}{c}
+  (1) \begin{color}{red}{(36)} \end{color} \\
+  (2) \begin{color}{red}{(18)} \end{color} \\
+  \begin{color}{red} (3) (12) \end{color} \\
+  (4) \begin{color}{red}{(9)} \end{color} \\
+  \begin{color}{red} (6) (6) \end{color} \\
+\end{array}
+\]
+This is not the case for non-primes. The number 6 divides 36, but in the facorization $\ds 36 = 4\cdot 9$, 6 divides neither factor.
+
+Any prime that divides $\ds \gamma_n = \frac{(2n)!}{(n!)^2}$ must divide the numerator, and any prime that divides $\ds (2n)! = (2n)(2n-1)\cdots 2\cdot 1$ must divide one of the factors and so cannot be larger than $\ds 2n$. This means that while $\ds \gamma_n$ is a large number even for relatively small $n$, it can have no ``large" prime factors. For example, $\ds \gamma_{50} \approx 10^{29}$ but has no prime factor larger than 100.
+
+Is this unusual? I had my computer randomly select 200 integers between $\ds 10^{24}$ and $\ds 10^{34}$, and the \textit{smallest} maximum prime factor of the bunch was $\ds 113578811$. Hmmm...
+
+\end{document}
