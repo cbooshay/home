@@ -1,0 +1,27 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{The Central Binomial Coefficients (2) \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+In my last post, I made the small observation that the central binomial coefficient
+\begin{equation} \label{gamman}
+  \gamma_n \doteq \binom{2n}{n} = \frac{(2n)!}{(n!)^2}
+\end{equation}
+has no prime factors larger than $\ds 2n$, which is a bit unusual for a number so large. So all the prime factors of $\ds \gamma_n$ are to be found in $\ds \lb 1, 2, \ldots, 2n \rb$, and most of the primes in this range occur in the prime factorization of $\ds \gamma_n$ either to the first power or not at all.
+
+Every prime in the range $\ds \lb n+1, n+2, \ldots, 2n \rb$ divides $\ds (2n)!$ but is too large to divide $n!$, and so must appear in the prime factorization of $\ds \gamma_n$. However, if $p^2$ divides $\ds (2n)!$, then there must be a multiple of $p$ besides $p$ itself in range $\ds \lb 1, 2\ldots, 2n\rb$. For $\ds p>n$, this is impossible, so every prime in the range $\ds \lb n+1, n+2, \ldots, 2n \rb$ appears in the prime factorization of $\ds \gamma_n$ to the first power.
+
+If $\ds \frac{2}{3}n <p\leq n$, then there is exactly one multiple of $p$ in the range $\ds \lb 1,2,\ldots,n\rb$ and exactly two multiples of $p$ in the range $\ds \lb 1,2,\ldots, 2n\rb$, so that in the fraction $\ds \frac{(2n)!}{(n!)^2}$, all the $p$'s will cancel and no such prime occurs in the prime factorization of $\ds \gamma_n$.
+
+For example, if $n=50$, then the primes $\ds 53, 59, 61, 67, 71, 73, 79, 83, 89, 97$ (the primes between 51 and $100$) each occur to the first power in the prime factorization of $\ds \gamma_n$, so 
+\begin{equation} \label{FactoringGamma50}
+  \gamma_{50} = C (53)(59)(61)(67)(71)(73)(79)(83)(89)(97)
+\end{equation}
+Also, the primes $\ds 37, 41, 43, 47$ (the primes between $\ds 100/3$ and $\ds 50$) do not divide $\ds \gamma_{50}$, so the prime factors of $C$ are to be found among $\ds 2, 3, 5, 7, 11, 13, 17, 19, $ $23, 29, 31$. 
+\end{document}
