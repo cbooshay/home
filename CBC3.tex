@@ -1,0 +1,26 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{The Central Binomial Coefficients Are All Even \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+This is the latest in a series of posts about the prime factorizations of the Central Binomial Coefficients, the numbers $\ds \gamma_n  = \binom{2n}{n}$. So far, we have noted that if a prime $p$ is such that either $\ds 2n/3<p\leq n$ or $\ds p>2n$, then $p$ does not appear in the prime factorization of $\ds \gamma_n$, and if $\ds n<p\leq 2n$, then $p$ appears to the first power in the prime factorization of $\ds \gamma_n$. This leaves the contribution of the primes between 2 and $\ds 2n/3$ undetermined. A tiny step forward can be taken using very basic properties of Pascal's Triangle.
+
+The binomial coefficient $\ds \binom{r}{k}$ is the number in row $r$ and column $k$ in Pascal's famous triangle (in the cases of both rows and columns, the count begins at 0). The rows are symmetric, that is $\ds \binom{r}{k} = \binom{r}{r-k}$, which means that $\ds \binom{2n-1}{n-1} = \binom{2n-1}{n}$. Also, every number in the triangle is the sum of the two numbers above it, a fact known as Pascal's Identity. Applying this to the central binomial coefficients gives:
+\[
+  \binom{2n}{n} = \binom{2n-1}{n-1}+\binom{2n-1}{n} = (2) \binom{2n-1}{n}
+\]
+This means $\ds \gamma_n$ is always even, so $2$ \textit{always} appears in its prime factorization, and the question becomes what power of $2$ appears in this prime factorization.
+
+The largest power of a prime $p$ that divides an integer $n$ is called the $p-$adic valuation of $n$ and symbolized $\ds v_p(n)$. Below is a graph of $\ds v_2(\gamma_n)$ for the first 100 values of $n$
+
+\pic{images/TwoValuation}
+
+The function is not periodic but does have a repetitive structure.
+
+\end{document}
