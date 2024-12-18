@@ -1,0 +1,105 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Formulas from Legendre and Kummer \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+Prime factorizations of products concatenate with products of powers of the same base simplifying according to the rules of exponents. For example, the prime factorization of $9450$ is $\ds 2\cdot 3^3 \cdot 5^2\cdot 7$ and the prime factorization of $\ds 7938$ is $\ds 2\cdot 3^4\cdot 7^2$, so the prime factorization of $\ds (9450)(7938)$ is 
+\[
+  \lp 2\cdot 3^3 \cdot 5^2\cdot 7 \rp \lp 2\cdot 3^4\cdot 7^2 \rp = 2^2 \cdot 3^7\cdot 5^2\cdot 7^3
+\]
+A fancy way of expressing this is to say, for example, that $\ds v_3\lp (9450)(7938) \rp = v_3(9450) + v_3(7938)$--the $p-$adic valuation function has the log-like property that 
+\[
+  v_p(ab) = v_p(a) + v_p(b)
+\]
+Consequently
+\[
+  v_p(n!) = v_p(n(n-1)\cdots 2\cdot 1) = \sum_{k=1}^n v_p(k)
+\]
+
+Using the relationship between $p-$adic valuations and digit sums discussed \href{https://cbooshay.github.io/home/thepdfs/CBC4.pdf}{here}, we can re-express this:
+\begin{eqnarray*}
+  v_p(n!) & = & \sum_{k=1}^n \frac{1 + S_p(k-1) - S_p(k)}{p-1} \\
+  & = & \frac{1}{p-1}\lp n + S_p(0) - S_p(n) \rp \\
+  & = & \frac{n - S_p(n)}{p-1}
+\end{eqnarray*}
+This result was proved by Legendre in 1830.
+
+In \href{https://cbooshay.github.io/home/thepdfs/CBC3.pdf}{a previous post}, we considered the $2-$adic valuations of the central binomial coefficients $\ds \gamma_n = \binom{2n}{n}$, that is, the numbers  $\ds v_2(\gamma_n)$. Playing around with this function, one is struck by the observation that $\ds v_2\lp \gamma_n \rp = 1$ if and only if $\ds n = 2^k$ for some nonnegative integer $k$. This is a consequence of Kummer's Theorem, which says that if $\ds S_p(x)$ is the sum of the base $p$ digits of $x$, then
+\begin{equation} \label{kummer}
+  v_p\lp \binom{r}{k}\rp = \frac{S_p(k) + S_p(r-k) - S_p(r)}{p-1}
+\end{equation}
+Because of the log-like nature of the $p-$adic valuation, 
+\[
+  v_p\lp \binom{r}{k}\rp = v_p \lp \frac{r!}{k!(r-k)!} \rp = v_p(r!) - v_p(k!) - v_p((r-k)!)
+\]
+Using Legendre's Formula to replace the terms on the right and simplifying gives (\ref{kummer}), and applying (\ref{kummer}) to the central binomial coefficients we get 
+\begin{equation} \label{VpOfGamman}
+  v_p(\gamma_n) = \frac{2 S_p(n) - S_p(2n)}{p-1}
+\end{equation}
+
+Multiplying a number by 10 shifts its base ten digits one place to the right but does not change its digit sum. More generally, multiplying a number by $p$ does not change its base $p$ digit sum. So in particular, $\ds S_2(2n) = S_2(n)$, and in the case $\ds p=2$, (\ref{VpOfGamman}) becomes the remarkable formula
+\[
+  v_2(\gamma_n) = S_2(n)
+\]
+That is, the power of $2$ that appears in the prime factorization of $\ds \binom{2n}{n}$ is just the sum of the base two digits of $n$, also called the Hamming Weight of $n$.
+
+
+\iffalse
+If the base $p$ digits of $n$ are $\ds d_0, d_1, \ldots, d_k$, and $\ds d_i \leq (p-1)/2$ for all $i$, then the base $p$ digits of $2n$ are $\ds 2d_0, 2d_1, \ldots, 2d_k$, which means that $\ds S_p(2n) = 2 S_p(n)$ and so $\ds v_p(\gamma_n)=0$. For example, $\ds 27=220_5$, so it should be the case that $\ds v_5(\gamma_{27}) =0$ (and it is). As $\ds v_p(\gamma_n)=0$ if and only if $\ds S_p(2n) = 2 S_p(n)$, the primes that do not appear in the prime factorization of $\ds \gamma_n$ are precisely those primes $p$ such that none of the base $p$ digits of $n$ is more than $\ds (p-1)/2$.
+
+Let $q = (p-1)/2$ for a prime $p>3$, and let $\ds \lb \gamma_{n_k} \rb$ be the subsequence of $\ds \lb \gamma_n \rb$ such that $\ds v_p(\gamma_{n_k})=0$. $\ds n_k$ is the number whose base $p$ digits are the base $q$ digits of $k$. For example, suppose we want to find the $\ds 147^{th}$ positive integer $\alpha$ such that $\ds v_{13}(\gamma_{\alpha})=0$. First we express $\ds 147$ in base $\ds (13-1)/2=6$: $\ds 147 = 403_6$. Then $\ds \alpha$ is the number with this base 13 representation, so 
+\[
+  \alpha = 4\times 13^2 + 0\times 13 + 3\times 13 = 679
+\]
+and one can check that $\ds v_{13}(\gamma_{679}) = 0$.
+
+Conjecture: $\ds v_p(\gamma_n) = 1$ if and only if the set of base $p$ digits of $n$ has exactly one element that is larger than $\ds (p-1)/2$.
+
+
+
+A few observations that will hopefully lead to a proof of this useful theorem. First,  
+\[
+  v_p(\gamma_n) = v_p( (2n)!) - 2 v_p(n!)
+\]
+
+This implies that $\ds v_p\lp \gamma_n \rp = \frac{2 S_p(n) - S_p(2n)}{p-1}$. $\ds S_2(2n) = S_2(n)$, and if $n$ is a power of 2, then $\ds S_2(n)=1$ and so $\ds v_2 \lp \gamma_n \rp = 1$.
+
+A consequence of this, as $\ds v_p(\gamma_n)$ must be a nonnegative integer, is that for any prime $p$, $\ds 2 S_p(n) - S_p(2n)$ must be divisible by $\ds p-1$.
+
+
+
+
+
+\section*{Erd\"{o}s Conjecture}
+
+Erd\"{o}s conjectured that that for $\ds n>4$, $\ds \gamma_n$ is not squarefree, which is equivalent to saying that for $n>4$, there is some prime $p$ such that $\ds p^2$ divides $\ds \gamma_n$. As we have seen, any such prime must be fairly small, i.e., must come from the range $\ds \lb 1,2,\ldots, 2n/3\rb$. What's more, a consequence of the observation that $\ds v_2(\gamma_n) = S_2(n)$ made in Section \ref{KummersTheorem} is that if $\ds S_2(n)>1$, then $\ds \gamma_n$ is divisible by four and so not square free. The only positive integers $n$ with $\ds S_2(n)\leq 1$ are powers of two, so if there is a positive integer $\ds n$ such that $\ds \gamma_n$ is not squarefree, then $n$ must be a power of two.
+
+For a positive integer $n$, $n$ \textbf{primorial} is the product of the primes less than or equal to $n$ and is expressed $\ds n\# $. So
+\begin{eqnarray*}
+ 10\# & = & (2)(3)(5)(7) = 210 \\
+ 15 \# & = & (2)(3)(5)(7)(11)(13) = 30030
+\end{eqnarray*}
+The prime factorization of $\ds \gamma_n$ includes one copy of every prime in the range $\ds \lb n+1, n+2, \ldots, 2n\rb$. The product of such primes is $\ds \frac{(2n)\#}{n \#}$. It can be shown that $\ds \frac{(2n)\#}{n \#} \leq 3.439^n$.
+
+
+
+The number on the right of (\ref{FactoringGamma50}) is the product of ten consecutive primes, from the $\ds 16^{th}$ prime through the $\ds 25^{th}$ prime. 
+So the number in (\ref{FactoringGamma50}) is $\ds \frac{97 \#}{52 \#}$.
+
+
+
+\begin{thebibliography}{99} 
+
+\bibitem{HANSON} Hanson, Denis. ``On the Product of the Primes." Canadian Mathematical Bulletin, volume 15, issue 1, March, 1972, pp. 33-37.
+
+\end{thebibliography}
+\fi
+
+
+\end{document}
