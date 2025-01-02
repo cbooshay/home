@@ -1,0 +1,119 @@
+body {
+	font: 100%;
+    font-family: Times;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	margin-top: 30px;
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-color: #879677;  /* #4B610B   this seems to control the background of the entire page */
+	background-image: url();
+	background-repeat: no-repeat;
+}
+
+a:link {
+	color: #CC3300;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #CC3300;
+}
+a:hover {
+	text-decoration: none;
+	color: #333399;
+}
+a:active {
+	text-decoration: none;
+	color: #CC3300;
+}
+
+.button {
+ background-color: #cdd4d3;
+ float: left;
+ font-size: 16px;
+ padding: 15px, 5px;
+ margin-top: 5px;
+}
+
+/* Header/Blog Title */
+.header {
+    text-align: center;
+    font-size: 25px;
+    background-color: white;
+    margin-top: 5px;
+    border-style: solid;
+    padding: 1px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 73%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 27%;
+}
+
+/* Add a card effect for articles */
+.maincard {
+  text-align: left;
+  background-color: white;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.sidecard {
+  align: right;
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  border-style: solid;
+}
+
+.mycard {
+  align: right;
+  text-align: center;
+  background-color: #cdd4d3;
+  border-style: solid;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.pdf {
+        float: left;
+        width: 75%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  } */
+} 

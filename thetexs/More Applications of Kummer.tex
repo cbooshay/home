@@ -1,0 +1,21 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{More Applications of Kummer \begin{small} \begin{color}{gray} (\today) \end{color} \end{small}}
+
+Kummer's Theorem gives the formula (\ref{VpOfGamman2}) relating $\ds v_p(\gamma_n)$ to $\ds S_p(n)$ and $\ds S_p(2n)$, where $\ds S_p(x)$ is the sum of the base $p$ digits of $x$. This can be leveraged to give some remarkable conclusions about prime factorizations of very large numbers based on the digits of a much smaller one.
+
+\begin{equation} \label{VpOfGamman2}
+  v_p(\gamma_n) = \frac{2 S_p(n) - S_p(2n)}{p-1}
+\end{equation}
+
+Doubling a number with small digits like $\ds 312$ is easy because we can just double each digit in its place: $\ds 2\times 312 = 624$. Doubling a number like $\ds 473$ is not so easy because in doubling the tens place, we wind up with ``too many" tens. More generally and precisely, if the base $p$ digits of $n$ are $\ds d_0, d_1, \ldots, d_k$, and $\ds d_i \leq (p-1)/2$ for all $i$, then the base $p$ digits of $2n$ are $\ds 2d_0, 2d_1, \ldots, 2d_k$, which means that $\ds S_p(2n) = 2 S_p(n)$ and so $\ds v_p(\gamma_n)=0$. For example, $\ds 27=220_5$; none of the base 5 digits of 27 is more than $\ds (5-1)/2$; so it should be the case that $\ds v_5(\gamma_{27}) =0$ (and it is). 
+
+In essence, if the base $p$ representation of $n$ contains all ``small" digits, then $p$ does not appear in the prime factorization of $\ds \gamma_n$. If $\ds n = 3220102_7$, then $\ds \gamma_n$ has nearly a quarter million digits, but no appearance of seven in its prime factorization.
+
+\end{document}

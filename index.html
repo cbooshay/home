@@ -2,247 +2,49 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title> Chris Boucher </title>
-<style type="text/css">
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Chris Boucher" />
+    <title> Miscellaneous Math </title>
+</head>
 
-body {
-	font: 100%;
-    font-family: Times;
-	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
-	margin-top: 30px;
-	padding: 0;
-	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
-	color: #000000;
-	background-color: #879677;  /* #4B610B   this seems to control the background of the entire page */
-	background-image: url();
-	background-repeat: no-repeat;
-}
+<script type='text/javascript' src='helpers.js'> </script>
     
-table, th, td {
-    border: 1px solid gray;
-    border-collapse: collapse;
-}
-td {
-    padding: 5px;
-}
-
-.oneColElsCtr #container {
-	width: 56em;
-	background: #FFFFFF;
-	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
-	border: 1px solid #000000;
-	text-align: left; /* this overrides the text-align: center on the body element. */
-}
-.oneColElsCtr #mainContent {
-	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
-}
-
-span.footnote { 
-    float: footnote; 
-    counter-increment: footnote;
-}
-
-.footnote::footnote-call {
-    content: counter(footnote, decimal) " ";
-    color: green;
-}
-
-.footnote::footnote-marker {
-    content: counter(footnote, lower-roman);
-    font-size: 14pt;
-    color: blue;
-}
-
-a:link {
-	color: #CC3300;
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-	color: #CC3300;
-}
-a:hover {
-	text-decoration: none;
-	color: #333399;
-}
-a:active {
-	text-decoration: none;
-	color: #CC3300;
-}
-
-/* Header/Blog Title */
-.header {
-    text-align: center;
-    font-size: 25px;
-    background-color: white;
-    padding: 1px;
-    margin-top: 5px;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 73%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 27%;
-  padding-left: 0 /* was 20px */;
-}
-
-/* Add a card effect for articles */
-.maincard {
-  text-align: left;
-  background-color: white;
-  padding: 5px;
-  margin-top: 5px;
-}
-
-.sidecard {
-  align: right;
-  text-align: center;
-  background-color: white;
-  padding: 5px;
-  margin-top: 5px;
-}
-
-.mycard {
-  align: right;
-  text-align: center;
-  background-color: #cdd4d3;
-  padding: 5px;
-  margin-top: 5px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-.pdf {
-        float: left;
-        width: 75%;
-        aspect-ratio: 4 / 3;
-    }
-
-    .pdf,
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  } */
-} 
-
-</style></head>
-
-<!-- <div class="row"> -->
-  <div float="left" class="leftcolumn" id="maincontent">
-    <div class="header">
+<body>
+    
+    <div id="top" class="header">
         <h2 style="font-family:Times;"> Miscellaneous Math </h2>
-        <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/CBC5.pdf" target="maincontent"> <font size="+2"> Formulas from Legendre and Kummer  </font> <font color="gray"> (December 18, 2024) </font> </a>
-        <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/CBC4.pdf" target="maincontent"> <font size="+2"> P-adic Valuations and Digit Sums  </font> <font color="gray"> (October 31, 2024) </font> </a>
-        <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/CBC3.pdf"> <font size="+2"> The Central Binomial Coefficients Are All Even  </font> </a>
-       <font color="gray"> (October 7, 2024) </font> <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/CBC2.pdf"> <font size="+2"> The Central Binomial Coefficients: Prime Factors between 2n/3 and 2n </font> </a>
-       <font color="gray"> (September 12, 2024) </font> <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/CBCNoLargePrimeFactors.pdf"> <font size="+2"> The Central Binomial Coefficients Have No Large Prime Factors </font> </a>
-       <font color="gray"> (September 5, 2024) </font> <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/Wordle.pdf"> <font size="+2"> Wordle and the Wolfram Language </font> </a>
-       <font color="gray"> (August 27, 2024) </font> <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/PackingTwoCircles.pdf"> <font size="+2"> Packing Two Cylinders </font> </a>
-       <font color="gray"> (August 22, 2024) </font> <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/ADollarADay.pdf"> <font size="+2"> A Dollar a Day </font> </a>
-       <font color="gray"> (August 14, 2024) </font> <br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/distance to horizon.pdf" target="leftcolumn"> <font size="+2"> Gazing East </font> </a>
-       <font color="gray"> (July 16, 2024) </font><br>
-       <p> </p>
-    </div>
-    <div class="maincard">
-       <a href="thepdfs/ExponentialGrowthAndRounding.pdf"> <font size="+2"> Exponential Growth and Rounding </font> </a>
-       <font color="gray"> (July 15, 2024) </font> <br>
-       <p> </p>
-    </div>
-  </div>
-  
-  <div class="rightcolumn">
-    <div class="mycard">
-      <h1> Chris Boucher </h1>
-      <img src="ParisMe.jpeg" align=bottom width=220 height=250 border=0>
-      <p> Mathematics professor at Salem State University </p>
-      <p> <a href="thepdfs/About.pdf"> about </a> </p>
- <!-- <p> <a href=""> CV </a> </p> -->
-      <p> <a href="https://www.linkedin.com/in/chris-boucher-24aa6a"> &nbsp; LinkedIn </a> </p>
-      <p> <a href="mailto:cboucher@salemstate.edu"> contact </a> </p>
     </div>
     
-    <div class="sidecard">
-      <h3> Of Interest </h3>
-      <p> <a href="https://www.johndcook.com/blog/"> &nbsp; John D. Cook </a> </p>
-      <p> <a href="https://writings.stephenwolfram.com"> &nbsp; Stephen Wolfram </a> </p>
-      <p> <a href="https://www.jeremykun.com"> &nbsp; Jeremy Kun </a> </p> <br>
+    <div class="leftcolumn" id="maincontent">
+        <script> makePage(0) </script>
     </div>
 
-<!--
-    <div class = "sidecard">
-     <a href='http://www.freevisitorcounters.com'>more information</a> 
-     <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=dcf95a35a5debf3e63d1a237ea90e50b7b15e577'></script>
-     <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1207592/t/3"></script>
-	</div>
+    <!--
+    <div align="left" onclick="older()" id="buttons">  <script> buttons() </script> </div>
+    <div class="leftcolumn" id="maincontent">
+        <div id="More Applications of Kummer" class="maincard">
+            <script> makePostBox("More Applications of Kummer", "December 27, 2024") </script>
+        </div>
+</div>
 -->
-  </div>
-
-
-
-
+    <div class="rightcolumn">
+      <div class="mycard">
+        <h1> Chris Boucher </h1>
+        <img src="ParisMe.jpeg" align=bottom width=220 height=250 border=0>
+        <p> Mathematics professor at Salem State University </p>
+        <p> <a href="thepdfs/About.pdf"> about </a> </p>
+   <!-- <p> <a href=""> CV </a> </p> -->
+        <p> <a href="https://www.linkedin.com/in/chris-boucher-24aa6a"> &nbsp; LinkedIn </a> </p>
+        <p> <a href="mailto:cboucher@salemstate.edu"> contact </a> </p>
+      </div>
+      
+      <div class="sidecard">
+        <h3> Of Interest </h3>
+        <p> <a href="https://www.johndcook.com/blog/"> &nbsp; John D. Cook </a> </p>
+        <p> <a href="https://writings.stephenwolfram.com"> &nbsp; Stephen Wolfram </a> </p>
+        <p> <a href="https://www.jeremykun.com"> &nbsp; Jeremy Kun </a> </p> <br>
+      </div>
+</body>
 
 </html>
