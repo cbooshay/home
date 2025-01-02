@@ -1,0 +1,42 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Cosine Bound \begin{small} \begin{color}{gray} (January 2, 2025) \end{color} \end{small}}
+
+The cosine function is a good lower bound for the standard normal density function near zero.
+
+\pic{images/CosineAndZ}
+
+To establish the bound, let $\ds g(x) = \log \left[\frac{e^{-x^2/2}}{\cos(x)}\right]$, so $\ds g'(x) = \tan(x) - x$. From Figure \ref{TanxMinusX}, the area of $\ds \triangle OAB$ is larger than that of the circular sector $\ds OAC$, so 
+\[
+  \frac{\tan(x)}{2} \geq \frac{x}{2} 
+\]
+Thus, for $\ds 0\leq x\leq \pi/2$, $\ds g'(x)\geq 0$ and $g(0)=0$, so $g(x)\geq 0$. Because $g$ is an even function, this means $\ds g(x) \geq 0$ for $\ds -\pi/2 \leq x\leq \pi/2$, which is equivalent to $\ds \cos(x) \leq e^{-x^2/2}$.
+
+\begin{figure}[H]
+\centering
+\caption{$\ds \tan(x) \geq x$}
+\pic{images/TanxMinusX}
+\label{TanxMinusX}
+\end{figure}
+
+This suggests that a good lower bound for textbook standard normal probabilities within one standard deviation of the mean is
+\begin{equation} \label{SineApprox}
+ P(0\leq Z\leq a) \geq \int_0^a \cos(x)\, dx = \sin(a)
+\end{equation}
+Figure \ref{SinApproxError} shows the difference between both sides of \ref{SineApprox} for $\ds 0\leq a \leq 1$.
+
+\begin{figure}[H]
+\centering
+\caption{$\ds P(0\leq Z\leq a) - \sin(a)$}
+\pic{images/SinApproxError}
+\label{SinApproxError}
+\end{figure}
+
+
+\end{document}
