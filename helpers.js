@@ -1,4 +1,5 @@
 const allposts = [
+    ["Bounding the Central Binomial Coefficients", "January 9, 2025"],
     ["Cosine Bound", "January 2, 2025"],
     ["More Applications of Kummer", "December 27, 2024"],
     ["Formulas from Legendre and Kummer", "December 18, 2024"],
