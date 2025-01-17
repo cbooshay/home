@@ -1,4 +1,5 @@
 const allposts = [
+    ["Arches", "January 17, 2025"]
     ["Bounding the Central Binomial Coefficients", "January 9, 2025"],
     ["Cosine Bound", "January 2, 2025"],
     ["More Applications of Kummer", "December 27, 2024"],

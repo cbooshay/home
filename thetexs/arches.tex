@@ -1,0 +1,42 @@
+% \documentclass[12pt]{article}
+
+\include{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Arches \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+As someone who has taught more calculus than most, my mind spends a lot of time in the plane thinking about curves there, and I have always been fascinated by the subtle (and sometimes not-so-subtle) differences among them. Take the connection of one point on the $x-$axis to another by an ``arch." Without being overly rigorous, let's say that an arch is a curve that lies on or above a secant line over any subinterval--we're aiming at concave down--and achieves a maximum value at the midpoint of the two $x-$values.
+
+We may as well position the points at $\ds (-r,0), (0,r)$ for some $r>0$ that is half the distance between the two original points, so our arch will pass through the points $\ds (\pm r,0)$ and $\ds (0,r)$. Any arch will sit in the envelope between the triangle with these vertices and the rectangle $\ds [-r,r]\times [0,r]$. Surely, the curved arch that jumps to mind first is a circular arch, i.e., the graph of the function $\ds y = \sqrt{r^2-x^2}$. Measuring the area under these arches gives
+\[
+\begin{array}{l l}
+\text{triangle} & \frac{1}{2}(2r)(r) = r^2 \\
+\text{circle} & \frac{\pi}{2} r^2 \\
+% \text{cycloid} & \frac{3}{\pi} r^2 \\
+\text{rectangle} & (2r)(r) = 2r^2
+\end{array}
+\]
+
+A parabolic arch would have the form $\ds y = c(r-x)(r+x)$, and to pass through the point $\ds (0,r)$ requires $\ds c = \frac{1}{r}$, so $\ds y = \frac{r^2-x^2}{r}$. To make a sinusoidal arch, we shift the sine function $r$ units left via $\ds y = \sin(x+r)$, scale it by a factor of $r$ to put the peak at the right height (so now $\ds y = r \sin(x+r)$). Finally, we would like to stretch the graph horizontally to make the point $\ds x=r$ on our sinusoidal arch feel like the point $\ds x=\pi$ on the sine function. Setting $\ds c(r+r) = \pi$ gives $\ds c = \pi/2r$, and so our sinusoidal arch is $\ds \lp r \sin \lp \frac{\pi(x+r)}{2r} \rp \rp$.
+
+A little integral calculus shows how these arches compare to the others.
+\[
+  \int_{-r}^r \frac{r^2-x^2}{r}\, dx = \frac{4}{3} r^2 \text{ and }
+  \int_{-r}^r r \sin \lp \frac{\pi(x+r)}{2r} \rp\, dx = \frac{4}{\pi} r^2
+\]
+So,
+\begin{eqnarray*}
+\text{triangle} & r^2 \\
+\text{sinusoidal} & \frac{4}{\pi} r^2 \\
+\text{parabolic} & \frac{4}{3} r^2 \\
+\text{circular} & \frac{\pi}{2} r^2 \\
+\text{rectangle} & 2r^2
+\end{eqnarray*}
+
+The parabolic arch can be generalized to a polynomial arch $\ds y = \frac{r^n-x^n}{r^{n-1}}$ for even $n$. This arch encloses an area of $\ds \frac{2n}{n+1} r^2$ and fills out the outer rectangle as $n$ grows.
+
+\end{document}
