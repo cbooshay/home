@@ -1,0 +1,29 @@
+% \documentclass[12pt]{article}
+
+\include{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Bounding Normal Tails \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+If $Z$ is a standard normal random variable, the tail probability $\ds P(Z>a)$ is given by 
+\[
+  \int_a^{\infty} \frac{1}{\sqrt{2 \pi}} e^{-x^2/2}\, dx
+\]
+A crude bound for this can be had by observing
+\begin{equation} \label{bound}
+ \int_a^{\infty} \frac{1}{\sqrt{2 \pi}} e^{-x^2/2}\, dx \leq
+ \int_a^{\infty} \frac{1}{\sqrt{2 \pi}} \lp \frac{x}{a} \rp e^{-x^2/2}\, dx = \frac{1}{\sqrt{2 \pi} a e^{a^2/2}}
+\end{equation}
+The middle integral can be evaluated explicitly via the substitution $\ds u = x^2/2$. 
+
+The approximation error--the difference between the two sides of (\ref{bound}), and the relative error--the approximation error divided by the correct value, i.e., the left side of (\ref{bound})--both appear to behave well.
+
+\pic{images/ApproximationError}
+
+\pic{images/RelativeError}
+
+\end{document}

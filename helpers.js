@@ -1,4 +1,5 @@
 const allposts = [
+    ["Bounding Normal Tails", "February 28, 2025"],
     ["Mom and Erdos", "January 30, 2025"],
     ["Arches", "January 17, 2025"],
     ["Bounding the Central Binomial Coefficients", "January 9, 2025"],
