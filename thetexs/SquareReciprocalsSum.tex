@@ -1,0 +1,40 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Square Reciprocals Sum \begin{small} \begin{color}{gray} (June 17, 2025) \end{color} \end{small}}
+
+Early in a study of infinite series, one learns that the sum
+\[
+  \sum_{n=1}^{\infty} \frac{1}{n^2}
+\]
+converges (this can be shown using the Integral Test). But to what? We can estimate the value of the series using partial sums, and the integral test error bound tells us that the error in using $n$ terms to estimate the sum of the series is not more than 
+\[
+  \int_n^{\infty} \frac{1}{x^2}\, dx = \frac{1}{n}
+\]
+
+Observing that $\ds \int_0^1 x^{n-1}\, dx = \frac{1}{n}$, we can re-express the summands
+\[
+  \frac{1}{n^2} = \lp \int_0^1 x^{n-1}\, dx \rp \lp \int_0^1 y^{n-1}\, dy \rp = \int_0^1 \int_0^1 (xy)^{n-1}\, dx\, dy
+\]
+If we can interchange the sum and the integral,
+\begin{eqnarray}
+  \sum_{n=1}^{\infty} \frac{1}{n^2} & = &  \int_0^1 \int_0^1 \sum_{n=1}^{\infty} (xy)^{n-1}\, dx\,dy \nonumber \\
+  & = & \int_0^1 \int_0^1 \frac{1}{1-x y} \, dx\, dy \label{Castillo} \\
+  & = & \int_0^1 -\frac{\log(1- x)}{x}\, dx \nonumber
+\end{eqnarray}
+
+The post \cite{CASTILLO} evaluates the integral (\ref{Castillo}), indicating that the method (which is somewhat involved) was ``dug out of the back of a calculus textbook with the help of Brian Burrell," which I mention only because I was a teaching assistant of Brian Burrell at the University of Massachusetts many, many moons ago.
+
+\begin{thebibliography}{99}
+
+\bibitem{CASTILLO} Castillo, Samuel. ``The Sum of the Reciprocals of the Squares." \url{https://www.overleaf.com/articles/the-sum-of-the-reciprocals-of-the-squares/bmdvdprxhqxd}
+
+\end{thebibliography}
+
+
+\end{document}

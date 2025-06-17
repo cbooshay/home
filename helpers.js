@@ -1,4 +1,5 @@
 const allposts = [
+    ["Square Reciprocals Sum", "June 17, 2025"]
     ["Bounding Normal Tails", "February 28, 2025"],
     ["Mom and Erdos", "January 30, 2025"],
     ["Arches", "January 17, 2025"],
