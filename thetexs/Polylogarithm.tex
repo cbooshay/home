@@ -1,0 +1,41 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{The Polylogarithm \begin{small} \begin{color}{gray} (June 25, 2025) \end{color} \end{small}}
+
+The polylogarithm function is $\ds \li_s(z) = \sum_{n=1}^{\infty} \frac{z^n}{n^s}$. It can be shown using the ratio test that this series converges for any $s$ and $\ds \abs{z}<1$. For some values of $s$, we can determine a closed form expression for $\ds \li_s(z)$, which will allow for easy calculation of the sums of some infinite series. 
+
+When $s=0$, this sum is a geometric series:
+\[
+  \li_0(z) = \sum_{n=1}^{\infty} z^n = \frac{z}{1-z}
+\]
+This is a start, but what allows us really make some headway is the relationship yielded by differentiating $\ds \li_s(z)$ and assuming that we can move the derivative inside the sum:
+
+\[
+  \li_s'(z) = \sum_{n=1}^{\infty} \frac{z^{n-1}}{n^{s-1}} = \frac{1}{z} \li_{s-1}(z)
+\]
+With $\ds s=0$ this equation becomes $\ds \frac{1}{z} \li_{-1}(z) = \li_0'(z)$. Since we have a closed form expression for $\ds \li_0(z)$, this gives us a closed form expression for $\ds \li_{-1}(z)$, namely
+\begin{equation} \label{FirstPolyLogResult}
+  \li_{-1}(z) = z \li_o'(z) = \frac{z}{(z-1)^2}
+\end{equation}
+
+Recalling that $\ds \li_{-1}(z) = \sum_{n=1}^{\infty} n z^n$, equation (\ref{FirstPolyLogResult}) allows the evaluation of a number of interesting sums. Taking $\ds z=1/2, 1/3, 1/4$, we see that 
+\begin{eqnarray*}
+  \sum_{n=1}^{\infty} \frac{n}{2^n} & = & 2 \\
+  \sum_{n=1}^{\infty} \frac{n}{3^n} & = & \frac{3}{4} \\
+  \sum_{n=1}^{\infty} \frac{n}{4^n} & = & \frac{4}{9} \\
+\end{eqnarray*}
+
+If $z$ is a positive rational number, so $\ds z = a/b$ for positive integers $a$ and $b$, then the right side of (\ref{FirstPolyLogResult}) becomes $\ds \frac{ab}{(a-b)^2}$. I am struck by the fact that if $z$ has the form $\ds a/(a+1)$, then the sum $\ds \sum_{n=1}^{\infty} n \lp \frac{a}{a+1}\rp^n$ has an integer value.
+\[
+  \sum_{n=1}^{\infty} n\lp \frac{4}{5} \rp^n = 20, \sum_{n=1}^{\infty} n \lp \frac{8}{9} \rp^n = 72, \textup{ etc.}
+\]
+
+
+
+\end{document}
