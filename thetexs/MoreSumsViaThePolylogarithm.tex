@@ -1,0 +1,36 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{More Sums via the Polylogarithm \begin{small} \begin{color}{gray} (July 15, 2025) \end{color} \end{small}}
+
+Differentiating $\ds \li_0(z)$ twice, we get
+\[
+  \li_0''(z) = \frac{d}{dz} \left[ \frac{1}{z} \li_{-1}(z) \right]
+   = -\frac{1}{z^2} \li_{-1}(z) + \frac{1}{z^2} \li_{-2}(z)
+\]
+Because we have closed form formulas for $\ds \li_0(z)$ and $\ds \li_{-1}(z)$, this allows us to compute such a formula for $\ds \li_{-2}(z)$, which is
+\begin{equation} \label{Li2}
+  \li_{-2}(z) = \sum_{n=1}^{\infty} n^2 z^n = -\frac{z(z+1)}{(z-1)^3}
+\end{equation}
+And again, taking $\ds z=1/2, 1/3, 1/4$, we can compute some remarkable sums.
+\begin{eqnarray*}
+  \sum_{n=1}^{\infty} \frac{n^2}{2^n} & = & 6 \\
+  \sum_{n=1}^{\infty} \frac{n^2}{3^n} & = & \frac{3}{2} \\
+  \sum_{n=1}^{\infty} \frac{n^2}{4^n} & = & \frac{20}{27} \\
+\end{eqnarray*}
+
+Again, it is the case that if $z = a/(a+1)$, then substituting into the right side of (\ref{Li2}) gives 
+\[
+  \sum_{n=1}^{\infty} n^2 \lp \frac{a}{a+1}\rp^n = a(a+1)(2a+1)
+\]
+and again we get some sums with perhaps unexpected integer values
+\[
+  \sum_{n=1}^{\infty} n^2 \lp \frac{2}{3} \rp^n = 30, \sum_{n=1}^{\infty} n^2 \lp \frac{6}{7} \rp^n= 546, \textup{ etc.}
+\]
+
+\end{document}
