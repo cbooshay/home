@@ -1,4 +1,5 @@
 const allposts = [
+    ["Hippocrates Lune", "October 31, 2025"]
     ["More Sums via the Polylogarithm", "July 15, 2025"],
     ["The Polylogarithm", "June 25, 2025"],
     ["Square Reciprocals Sum", "June 17, 2025"],
@@ -21,6 +22,24 @@ const allposts = [
                   ];
 
 var index = 0;
+
+function oldbutton() {
+        const older = document.createElement("button");
+        older.setAttribute("align", "left");
+        older.setAttribute("class", "button");
+        older.setAttribute("onclick", "older()");
+        older.innerHTML = ">>> Older";
+        return older
+}
+
+function newbutton() {
+        const newer = document.createElement("button");
+        newer.setAttribute("align", "left");
+        newer.setAttribute("class", "button");
+        newer.setAttribute("onclick", "newer()");
+        newer.innerHTML = "<<< Newer";
+        return newer
+}
 
 function buttons() {
     if (index+9<allposts.length) {
@@ -59,6 +78,18 @@ function makePage(start) {
         makePostBox(allposts[i][0], allposts[i][1]);
     };
     container.appendChild(buttons());
+/*
+    if(index<allposts.length-9)&&(index+9<allposts.length) {
+        container.appendChild(oldbutton());
+        container.appendChild(newbutton());
+    }
+    else if(index<allposts.length-9) {
+        container.appendChild(newbutton());
+    }
+    else if(index+9<allposts.length) {
+        container.appendChild(oldbutton());
+    }
+*/
 }
 
 function makePostBox(title, date) {

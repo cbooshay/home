@@ -1,0 +1,23 @@
+% preamble
+
+\include{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Hippocrates's Lune \begin{small} \begin{color}{gray} \\
+(October 31, 2025) \end{color} \end{small}}
+
+Hippocrates' lune is one of the earliest examples of quadrature, the construction of a square (or in this case a half square) with area equal to that of a given curved figure. The semicircle with diameter $AB$ has area $\ds \frac{\pi z^2}{8}$. The sector $OAB$ has area $\ds \frac{\pi x^2}{4}$. By the Pythagorean Theorem, $\ds x^2 = \frac{z^2}{2}$, so these two areas are equal. Thus, if we subtract the white region from each, the two remaining areas must be the same. It follows that the two disjoint blue regions have the same area, which is $\ds \frac{x^2}{2}$.
+
+\begin{figure}[h]
+\centering
+\caption{Hippocrates' Lune}
+\label{lune}
+\includegraphics{images/lune.pdf}
+\end{figure}
+
+What's more, the length of the outer boundary of the lune is $\ds (2 \pi)(z)(1/2) = \frac{\pi z}{2}$, the length of the inner boundary is $\ds (2 \pi x)/4 = \frac{\pi x}{2}$, and the ratio of the former to the latter is the same as that of $z$ to $x$, which is $\ds \sqrt{2}$.
+
+\end{document}
