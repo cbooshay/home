@@ -1,0 +1,38 @@
+% preamble
+
+\include{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Gravitational Acceleration \begin{small} \begin{color}{gray} \\
+(November 4, 2025) \end{color} \end{small}}
+
+Newton's Law of Gravitation says that the gravitational force between an object of mass $\ds m_1$ and an object of mass $m_2$ whose centers are at a distance $r$ is 
+\[
+  F = \frac{G m_1 m_2}{r^2}
+\]
+where 
+\[
+  G = 6.6742 \times 10^{-11} m^3 s^{-2} kg^{-1}
+\]
+If one of the objects is the Earth, then $\ds m_1 \approx 5.972 \times 10^{24}$ kg. Suppose the other is some small (relative to the mass of the Earth) mass $\ds m_2$ on the surface of the Earth. Then $\ds r \approx 6.378 \times 10^6$ m, and 
+\begin{align*}
+  F &= m_2 \lp \frac{\lp 6.6742 \times 10^{-11} \textup{m}^3 \textup{s}^{-2} \textup{kg}^{-1} \rp \lp 5.972 \times 10^{24} \textup{kg} \rp}{\lp 6.378 \times 10^6 \textup{m} \rp^2} \rp \\
+  &= m_2 \lp 9.798 \, \textup{m}\, \textup{s}^{-2} \rp
+\end{align*}
+which gives the familiar constant of gravitational acceleration. 
+
+If a mass is at a height $z$ above the surface of the Earth, so $\ds r = r_E + z$, then $\ds F = mg$, where 
+\begin{align*}
+  g &= \frac{G m_E}{(r_E+z)^2} \\
+  &= \frac{G m_E}{r_E^2} \cdot \frac{r_E^2}{(r_E+z)^2} \\
+  &= g_0 \lp \frac{r_E^2}{(r_E+z)^2} \rp
+\end{align*}
+If $\ds \alpha$ is the ratio of $z$ to the radius of the Earth, the right hand side becomes $\ds g_0 \lp \frac{1}{(1+\alpha)^2}\rp$, and we see how $g$ shrinks with $\ds \alpha$.
+
+The top of Mount Everest is about $\ds 8849$ meters above the surface of the Earth, giving an $\ds \alpha-$value of $\ds .00139$, and $\ds g = .997 g_0$. To lower the gravitational constant to 90\% of its surface-of-the-Earth value, one would have to be about 4\% of an Earth radius (roughly 214 miles) above the surface.
+
+
+\end{document}

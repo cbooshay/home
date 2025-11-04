@@ -1,4 +1,5 @@
 const allposts = [
+    ["Gravitational Acceleration", "November 4, 2025"],
     ["Hippocrates Lune", "October 31, 2025"],
     ["More Sums via the Polylogarithm", "July 15, 2025"],
     ["The Polylogarithm", "June 25, 2025"],
@@ -42,21 +43,13 @@ function newbutton() {
 }
 
 function buttons() {
-    if (index+9<allposts.length) {
-        const older = document.createElement("button");
-        older.setAttribute("align", "left");
-        older.setAttribute("class", "button");
-        older.setAttribute("onclick", "older()");
-        older.innerHTML = ">>> Older";
-        return older
+    if (index+9<allposts.length)
+    {
+        return oldbutton()
     }
-    else if (index>length-9) {
-        const newer = document.createElement("button");
-        newer.setAttribute("align", "left");
-        newer.setAttribute("class", "button");
-        newer.setAttribute("onclick", "newer()");
-        newer.innerHTML = "<<< Newer";
-        return newer
+    else if (index>length-9)
+    {
+        return newbutton()
     }
 }
 
@@ -73,23 +66,24 @@ function newer() {
 function makePage(start) {
     const container = document.getElementById("maincontent");
     container.innerHTML = "";
-    for (let i=start; i<Math.min(start+9, allposts.length); i++) {
+    for (let i=start; i<Math.min(start+9, allposts.length); i++)
+    {
         console.log(i);
         makePostBox(allposts[i][0], allposts[i][1]);
     };
-    container.appendChild(buttons());
-/*
-    if(index<allposts.length-9)&&(index+9<allposts.length) {
+    if ((start>0) && (start+9 < allposts.length))
+    {
         container.appendChild(oldbutton());
         container.appendChild(newbutton());
     }
-    else if(index<allposts.length-9) {
+    else if (start == 0)
+    {
+        container.appendChild(buttons());
+    }
+    else
+    {
         container.appendChild(newbutton());
-    }
-    else if(index+9<allposts.length) {
-        container.appendChild(oldbutton());
-    }
-*/
+    };
 }
 
 function makePostBox(title, date) {
