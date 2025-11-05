@@ -29,7 +29,7 @@ function oldbutton() {
         older.setAttribute("align", "left");
         older.setAttribute("class", "button");
         older.setAttribute("onclick", "older()");
-        older.innerHTML = ">>> Older";
+        older.innerHTML = "<<< Older";
         return older
 }
 
@@ -38,7 +38,7 @@ function newbutton() {
         newer.setAttribute("align", "left");
         newer.setAttribute("class", "button");
         newer.setAttribute("onclick", "newer()");
-        newer.innerHTML = "<<< Newer";
+        newer.innerHTML = "Newer >>>";
         return newer
 }
 
