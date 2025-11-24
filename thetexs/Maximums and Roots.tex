@@ -1,0 +1,34 @@
+% preamble
+
+\include{preamble}
+
+% document
+
+\begin{document}
+
+\section*{Roots and Maximums of Random Numbers \begin{small} \begin{color}{gray} (November 24, 2025) \end{color} \end{small}}
+
+Matt Parker, proprietor of the YouTube channel ``Stand-up Maths," does a nice video explaining why the $\ds n^{th}$ root of a random number (from the unit interval) has the same distribution as the maximum of $n$ independent such numbers. That is, if 
+\begin{align*}
+  Y_1 &= \sqrt[n]{X} \\
+  Y_2 &= \max (X_1, X_2, \ldots, X_n)
+\end{align*}
+where all the $X$'s are drawn randomly from $\ds [0,1]$, then $\ds Y_1$ and $\ds Y_2$ have exactly the same probability distribution, which may or may not be counterintuitive. 
+
+Showing this is a nice exercise for undergraduate probability students as the tools of calculus give the result easily and elegantly. What we mean by ``$X$ is drawn randomly from $\ds [0,1]$" is that $X$ has probability density function $\ds f(x) = 1$ and cumulative distribution function $\ds F(x) = x$ (for $\ds x\in [0,1]$). If we know that the pdf is the derivative of the cdf, and we know differential calculus, then
+\begin{align*}
+ f_{Y_1}(y) &= \frac{d}{dy} P\lp \sqrt[n]{X} \leq y \rp \\
+ &= \frac{d}{dy} F(y^n) \\
+ &= f(y^n) n y^{n-1} \\
+ &= n y^{n-1}
+\end{align*}
+Also,
+\begin{align*}
+ f_{Y_2}(y) &= \frac{d}{dy} P\lp \max (X_1, X_2, \ldots, X_n) \leq y \rp \\
+ &= \frac{d}{dy} P(X_1\leq y)P(X_2\leq y) \cdots P(X_n\leq y) \\
+ &= \frac{d}{dy} F(y)^n \\
+ &= n F(y)^{n-1} f(y) \\
+ &= n y^{n-1}
+\end{align*}
+
+\end{document}

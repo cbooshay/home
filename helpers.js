@@ -1,4 +1,5 @@
 const allposts = [
+    ["Maximums and Roots", "November 24, 2025"],
     ["Gravitational Acceleration", "November 4, 2025"],
     ["Hippocrates Lune", "October 31, 2025"],
     ["More Sums via the Polylogarithm", "July 15, 2025"],
