@@ -1,4 +1,5 @@
 const allposts = [
+    ["The Ratio of Area to Circumference is Half the Radius", "December 26, 2025"],
     ["Maximums and Roots", "November 24, 2025"],
     ["Gravitational Acceleration", "November 4, 2025"],
     ["Hippocrates Lune", "October 31, 2025"],

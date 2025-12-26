@@ -1,0 +1,47 @@
+% \documentclass[12pt]{article}
+
+\include{preamble}
+
+% document
+
+\begin{document}
+
+\section*{The Ratio of Area to Circumference is Half the Radius \begin{small} \begin{color}{gray} \\
+(\today) \end{color} \end{small}}
+
+Pretending that we know some integral calculus but not how to measure circles, we know that the area of the first quadrant of a circle with radius $r$ centered at the origin is 
+\[
+ A = \int_0^r \sqrt{r^2-x^2}\, dx
+\]
+and its length is 
+\[
+ L = \int_0^r \sqrt{ 1 + \lp\frac{d}{dx}\lp \sqrt{r^2-x^2} \rp\rp^2}\, dx = \int_0^r \frac{r}{\sqrt{r^2-x^2}}\, dx
+\]
+This theorem connects these two integrals:
+
+\begin{thm} For $\ds n=2,3,\ldots,$ and $\ds r>0$,
+\begin{equation} \label{IntegralResult}
+  \int_0^r \frac{r^n}{\sqrt{r^n-x^n}} \, dx = \lp 1+ \frac{2}{n} \rp \int_0^r \sqrt{r^n-x^n}\, dx
+\end{equation}
+\end{thm}
+
+\begin{proof} Observing that 
+\begin{align*}
+  \int_0^r \sqrt{r^n-x^n}\, dx &= \int_0^r \frac{r^n-x^n}{\sqrt{r^n-x^n}}\, dx \\
+  &= \int_0^r \frac{r^n}{\sqrt{r^n-x^n}}\, dx - \int_0^r \frac{x^n}{\sqrt{r^n-x^n}}\, dx \\
+  &= \int_0^r \frac{r^n}{\sqrt{1-x^n}}\, dx + \int_0^r \frac{2x}{n}\cdot \frac{d}{dx} \sqrt{r^n-x^n}\, dx
+\end{align*}
+Applying integration by parts to the second integral on the right with $\ds u = 2x/n$ and $\ds dv = \frac{d}{dx} \sqrt{r^n-x^n}\, dx$ gives
+\begin{align*}
+  \int_0^r \frac{2x}{n}\cdot \frac{d}{dx} \sqrt{r^n-x^n}\, dx &= \left[ \frac{2x}{n} \sqrt{r^n-x^n} \right]_0^r - \frac{2}{n} \int_0^r \sqrt{r^n-x^n}\, dx \\
+  &= - \frac{2}{n} \int_0^r \sqrt{r^n-x^n}\, dx
+\end{align*}
+and (\ref{IntegralResult}) follows.
+\end{proof}
+
+Taking $n=2$ gives 
+\[
+  r L = \lp 1+ \frac{2}{2} \rp A \textup{ or } \frac{A}{L} = \frac{r}{2}
+\]
+
+\end{document}
