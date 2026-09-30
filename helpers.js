@@ -14,16 +14,16 @@ const allposts = [
     ["Cosine Bound", "January 2, 2025"],
     ["More Applications of Kummer", "December 27, 2024"],
     ["Formulas from Legendre and Kummer", "December 18, 2024"],
-    ["P-adic Valuations and Digit Sums", "October 31, 2024"],
+    ["Panic Valuations and Digit Sums", "October 31, 2024"],
     ["The Central Binomial Coefficients Are All Even", "October 7, 2024"],
     ["Prime Factors of The Central Binomial Coefficients Down to 2n Over 3", "September 12, 2024"],
     ["The Central Binomial Coefficients Have No Large Prime Factors", "September 5, 2024"],
-    ["Wordle and the Wolfram Language", "August 27, 2024"],
+    ["World and the Wolfram Language", "August 27, 2024"],
     ["Packing Two Cylinders", "August 22, 2024"],
     ["A Dollar a Day", "August 14, 2024"],
     ["Gazing East", "July 16, 2024"],
     ["Exponential Growth and Rounding", "July 15, 2024"]
-                  ];
+];
 
 var index = 0;
 
@@ -63,6 +63,16 @@ function older() {
 
 function newer() {
     index = index-9;
+    makePage(index);
+}
+
+function previous() {
+    Index = index-1;
+    makePage(index);
+}
+
+function next() {
+    index = index+1;
     makePage(index);
 }
 
@@ -123,7 +133,13 @@ function simple(post) {
     homeText.setAttribute("size", "+2");
     homeText.setAttribute("color", "#CC3300");
     homeText.innerHTML="Home";
+
+    const prev=document.createElement("button");
+    prev.setAttribute("onclick", "previous(index)");
+    prev.innerHTML="Previous post"
+
     const divider = document.createElement("hr");
+    homeText.appendChild(prev);
     homeText.appendChild(divider);
     backLink.appendChild(homeText);
     const newObj = document.createElement("object");
